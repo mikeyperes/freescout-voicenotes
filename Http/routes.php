@@ -6,7 +6,10 @@ Route::group(['middleware' => ['web', 'auth']], function () {
         'uses'    => 'Modules\HexawebVoiceNotes\Http\Controllers\VoiceNoteController@upload',
         'laroute' => true,
     ])->name('voicenotes.upload');
+});
 
+// ── Admin-only settings routes ──
+Route::group(['middleware' => ['web', 'auth', 'roles'], 'roles' => ['admin']], function () {
     Route::get('/manage/voicenotes', [
         'uses' => 'Modules\HexawebVoiceNotes\Http\Controllers\VoiceNoteController@settings',
     ])->name('voicenotes.settings');
