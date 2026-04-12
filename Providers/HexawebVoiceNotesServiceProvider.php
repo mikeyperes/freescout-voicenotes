@@ -67,7 +67,6 @@ class HexawebVoiceNotesServiceProvider extends ServiceProvider
     {
         \Eventy::addAction('javascript', function () {
             $maxDuration = (int) \Option::get('voicenotes.max_duration', 300);
-            $jsUrl = \Module::getPublicPath('hexawebvoicenotes');
 
             // Pass settings to JS
             echo "window._hvnMaxSeconds = " . $maxDuration . ";\n";

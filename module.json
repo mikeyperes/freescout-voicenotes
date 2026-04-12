@@ -2,8 +2,10 @@
     "name": "HexawebVoiceNotes",
     "alias": "hexawebvoicenotes",
     "description": "Record voice notes from the reply editor, convert to MP3, and attach with inline audio players.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "active": 1,
     "detached": true,
-    "providers": ["Modules\\HexawebVoiceNotes\\Providers\\HexawebVoiceNotesServiceProvider"]
+    "providers": [
+        "Modules\\HexawebVoiceNotes\\Providers\\HexawebVoiceNotesServiceProvider"
+    ]
 }
